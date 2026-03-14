@@ -112,7 +112,7 @@ Get profile info, create posts, manage company pages, and engage with content on
 - **create_company_post** -- Post on behalf of a company page. Requires a connected Company Page via the org OAuth flow. Provide `text` and optional `organization_id` and `visibility`.
 
 ## Feed & Discovery
-- **get_feed_posts** -- Get recent posts from your LinkedIn feed. Optional `count` (1-50).
+- **get_feed_posts** -- Get your own recent LinkedIn posts. Optional `count` (1-50).
 - **get_post_comments** -- Read comments on a post. Provide `post_urn` and optional `count`.
 
 ## Engagement

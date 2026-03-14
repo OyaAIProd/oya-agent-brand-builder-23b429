@@ -303,10 +303,12 @@ def do_get_connections_count(headers):
 
 
 def do_get_feed_posts(headers, count=10):
-    """Get recent posts from the authenticated user's feed."""
+    """Get the authenticated user's own recent posts."""
     count = max(1, min(50, int(count or 10)))
+    person_urn = _get_person_urn(headers)
     data = api_get(headers, "posts", params={
-        "q": "feed",
+        "q": "author",
+        "author": person_urn,
         "count": count,
         "sortBy": "LAST_MODIFIED",
     })

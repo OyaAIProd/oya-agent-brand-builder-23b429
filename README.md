@@ -1,6 +1,6 @@
 # Brand Builder
 
-> Built with [Oya AI](https://oya.ai)
+> Built with [Oya AI](http://localhost:3000)
 
 ## About
 
@@ -36,24 +36,24 @@ Pass your API key via either header:
 - `Authorization: Bearer a2a_your_key_here`
 - `X-API-Key: a2a_your_key_here`
 
-Create API keys at [https://oya.ai/api-keys](https://oya.ai/api-keys).
+Create API keys at [http://localhost:3000/api-keys](http://localhost:3000/api-keys).
 
 ### Endpoint
 
 ```
-https://oya.ai/api/v1/chat/completions
+http://localhost:3000/api/v1/chat/completions
 ```
 
 ### cURL
 
 ```bash
-curl -X POST https://oya.ai/api/v1/chat/completions \
+curl -X POST http://localhost:3000/api/v1/chat/completions \
   -H "Authorization: Bearer a2a_your_key_here" \
   -H "Content-Type: application/json" \
   -d '{"model":"gemini/gemini-2.5-flash","messages":[{"role":"user","content":"Hello"}]}'
 
 # Continue a conversation using thread_id from the first response:
-curl -X POST https://oya.ai/api/v1/chat/completions \
+curl -X POST http://localhost:3000/api/v1/chat/completions \
   -H "Authorization: Bearer a2a_your_key_here" \
   -H "Content-Type: application/json" \
   -d '{"model":"gemini/gemini-2.5-flash","messages":[{"role":"user","content":"Follow up"}],"thread_id":"THREAD_ID"}'
@@ -66,7 +66,7 @@ from openai import OpenAI
 
 client = OpenAI(
     api_key="a2a_your_key_here",
-    base_url="https://oya.ai/api/v1",
+    base_url="http://localhost:3000/api/v1",
 )
 
 # First message — starts a new thread
@@ -93,7 +93,7 @@ import OpenAI from "openai";
 
 const client = new OpenAI({
   apiKey: "a2a_your_key_here",
-  baseURL: "https://oya.ai/api/v1",
+  baseURL: "http://localhost:3000/api/v1",
 });
 
 // First message — starts a new thread
@@ -127,7 +127,7 @@ struct Main {
     static func main() async throws {
         let config = OpenAI.Configuration(
             token: "a2a_your_key_here",
-            host: "oya.ai",
+            host: "localhost:3000",
             scheme: "https"
         )
         let client = OpenAI(configuration: config)
@@ -161,7 +161,7 @@ import kotlinx.coroutines.runBlocking
 fun main() = runBlocking {
     val openai = OpenAI(
         token = "a2a_your_key_here",
-        host = OpenAIHost(baseUrl = "https://oya.ai/api/v1/")
+        host = OpenAIHost(baseUrl = "http://localhost:3000/api/v1/")
     )
     val completion = openai.chatCompletion(
         ChatCompletionRequest(
@@ -192,7 +192,7 @@ for chunk in stream:
 ```html
 <!-- Oya Chat Widget -->
 <script
-  src="https://oya.ai/widget.js"
+  src="http://localhost:3000/widget.js"
   data-agent-id="d7a8f682-b187-452c-a91a-e127f5439168"
   data-api-key="a2a_your_key_here"
   data-title="Brand Builder"
@@ -209,4 +209,4 @@ for chunk in stream:
 
 ---
 
-*Managed by [Oya AI](https://oya.ai). Do not edit manually — changes are overwritten on each sync.*
+*Managed by [Oya AI](http://localhost:3000). Do not edit manually — changes are overwritten on each sync.*

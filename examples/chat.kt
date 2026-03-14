@@ -12,7 +12,7 @@ import kotlinx.coroutines.runBlocking
 fun main() = runBlocking {
     val openai = OpenAI(
         token = "a2a_your_key_here",
-        host = OpenAIHost(baseUrl = "https://oya.ai/api/v1/")
+        host = OpenAIHost(baseUrl = "http://localhost:3000/api/v1/")
     )
     val completion = openai.chatCompletion(
         ChatCompletionRequest(

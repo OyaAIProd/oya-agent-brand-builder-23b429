@@ -5,8 +5,8 @@ pip install openai
 from openai import OpenAI
 
 client = OpenAI(
-    api_key="a2a_your_key_here",  # Replace with your key from https://oya.ai/api-keys
-    base_url="https://oya.ai/api/v1",
+    api_key="a2a_your_key_here",  # Replace with your key from http://localhost:3000/api-keys
+    base_url="http://localhost:3000/api/v1",
 )
 
 # First message — starts a new thread

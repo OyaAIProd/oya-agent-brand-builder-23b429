@@ -6,8 +6,8 @@
 import OpenAI from "openai";
 
 const client = new OpenAI({
-  apiKey: "a2a_your_key_here", // Replace with your key from https://oya.ai/api-keys
-  baseURL: "https://oya.ai/api/v1",
+  apiKey: "a2a_your_key_here", // Replace with your key from http://localhost:3000/api-keys
+  baseURL: "http://localhost:3000/api/v1",
 });
 
 async function main() {

@@ -9,7 +9,7 @@ struct Main {
     static func main() async throws {
         let config = OpenAI.Configuration(
             token: "a2a_your_key_here",
-            host: "oya.ai",
+            host: "localhost:3000",
             scheme: "https"
         )
         let client = OpenAI(configuration: config)
